@@ -29,7 +29,7 @@ module OmniAuth
 
       option :authorize_options, [:scope, :display]
 
-      uid { raw_info['id'].to_s }
+      uid { raw_info['uid'].to_s }
 
       # https://github.com/intridea/omniauth/wiki/Auth-Hash-Schema
       info do
@@ -60,7 +60,7 @@ module OmniAuth
           params = {
             :fields   => info_options,
             :lang     => lang_option,
-            #:v        => API_VERSION,
+            cu:v        => API_VERSION,
           }
 
           log :info, "access_token.get with params: #{params}"
