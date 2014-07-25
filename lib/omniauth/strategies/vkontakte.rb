@@ -65,7 +65,8 @@ module OmniAuth
 
           log :info, "access_token.get with params: #{params}"
           result = access_token.get('/method/users.get', :params => params).parsed["response"]
-
+          log :info, "result: #{result}"
+          log :info, "access_token: #{access_token.inspect}"
           raise NoRawData, result unless (result.is_a?(Array) and result.first)
           result.first
         end
