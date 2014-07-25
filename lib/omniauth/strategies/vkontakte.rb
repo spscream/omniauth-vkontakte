@@ -60,7 +60,7 @@ module OmniAuth
           params = {
             :fields   => info_options,
             :lang     => lang_option,
-            cu:v        => API_VERSION,
+            #:v        => API_VERSION,
           }
 
           log :info, "access_token.get with params: #{params}"
